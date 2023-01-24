@@ -1,0 +1,391 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Poppins:wght@300;700;900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.prose img {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+html {
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+#allieTitle span {
+  animation: allieWave 1s infinite ease-in-out;
+  animation-delay: calc(-0.3s * var(--i));
+  position: relative;
+
+  display: inline-block;
+}
+
+#allie-abt>p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content-section {
+  max-width: 80rem;
+}
+
+.gallery-slide-0 {
+  animation: gallery-slide-0 15s ease-in-out infinite;
+  animation-play-state: running;
+}
+
+.gallery-slide-1 {
+  animation: gallery-slide-1 15s ease-in-out infinite;
+}
+
+.gallery-slide-2 {
+  animation: gallery-slide-2 15s ease-in-out infinite;
+}
+
+@keyframes allieWave {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes gallery-slide-0 {
+  0% {
+    opacity: 1
+  }
+
+  15% {
+    opacity: 1
+  }
+
+  30% {
+    opacity: 0
+  }
+
+  45% {
+    opacity: 0
+  }
+
+  60% {
+    opacity: 0
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes gallery-slide-1 {
+  0% {
+    opacity: 0
+  }
+
+  15% {
+    opacity: 0
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0
+  }
+}
+
+@keyframes gallery-slide-2 {
+
+  0% {
+    opacity: 0
+  }
+
+  15% {
+    opacity: 0
+  }
+
+  30% {
+    opacity: 0
+  }
+
+  45% {
+    opacity: 0
+  }
+
+  60% {
+    opacity: 1
+  }
+
+  80% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 0
+  }
+}
+
+/* p {
+  line-height: 1.75;
+}
+
+footer .footer {
+  color: #fff;
+  background-color: #5f5ccc;
+  padding: 0.5rem;
+  margin-top: auto;
+}
+
+section {}
+
+#root .navbar {
+  background-color: #f14668;
+}
+
+#allieTitle {
+  font-family: "Covered By Your Grace", cursive;
+  font-size: 5rem;
+  position: relative;
+}
+
+#allieTitle>span {
+  padding-right: 1rem;
+}
+
+#allieTitle span span {
+  animation: allieWave 1s infinite ease-in-out;
+  animation-delay: calc(-0.3s * var(--i));
+  position: relative;
+
+  display: inline-block;
+}
+
+#allieHero {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  animation: hero-load 1000ms ease-out;
+}
+
+#portfolio-box {
+  min-height: 60rem;
+}
+
+.heart {
+  width: 50px;
+}
+
+.gradient-border>img {
+  border-radius: 100%;
+  object-fit: contain;
+  height: 100%;
+  width: auto;
+}
+
+a.page-navi {
+  font-family: "Covered By Your Grace", cursive;
+  font-size: 2rem;
+}
+
+.navbar-item.is-expanded {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.button.navbar-burger {
+  height: auto;
+}
+
+.section {
+  padding-top: 2rem;
+  background-color: #5f5ccc;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 60'%3E%3Cg %3E%3Crect fill='%235F5CCC' width='11' height='11'/%3E%3Crect fill='%236c5cca' x='10' width='11' height='11'/%3E%3Crect fill='%23775bc9' y='10' width='11' height='11'/%3E%3Crect fill='%23825bc7' x='20' width='11' height='11'/%3E%3Crect fill='%238b5ac5' x='10' y='10' width='11' height='11'/%3E%3Crect fill='%23945ac3' y='20' width='11' height='11'/%3E%3Crect fill='%239c5ac0' x='30' width='11' height='11'/%3E%3Crect fill='%23a45abe' x='20' y='10' width='11' height='11'/%3E%3Crect fill='%23ab5abb' x='10' y='20' width='11' height='11'/%3E%3Crect fill='%23b25ab9' y='30' width='11' height='11'/%3E%3Crect fill='%23b85bb6' x='40' width='11' height='11'/%3E%3Crect fill='%23be5cb3' x='30' y='10' width='11' height='11'/%3E%3Crect fill='%23c45cb1' x='20' y='20' width='11' height='11'/%3E%3Crect fill='%23c95dae' x='10' y='30' width='11' height='11'/%3E%3Crect fill='%23ce5fab' y='40' width='11' height='11'/%3E%3Crect fill='%23d360a8' x='50' width='11' height='11'/%3E%3Crect fill='%23d762a6' x='40' y='10' width='11' height='11'/%3E%3Crect fill='%23db64a3' x='30' y='20' width='11' height='11'/%3E%3Crect fill='%23de66a0' x='20' y='30' width='11' height='11'/%3E%3Crect fill='%23e2689e' x='10' y='40' width='11' height='11'/%3E%3Crect fill='%23e56a9b' y='50' width='11' height='11'/%3E%3Crect fill='%23e86d99' x='60' width='11' height='11'/%3E%3Crect fill='%23eb7097' x='50' y='10' width='11' height='11'/%3E%3Crect fill='%23ed7394' x='40' y='20' width='11' height='11'/%3E%3Crect fill='%23ef7692' x='30' y='30' width='11' height='11'/%3E%3Crect fill='%23f17990' x='20' y='40' width='11' height='11'/%3E%3Crect fill='%23f37c8e' x='10' y='50' width='11' height='11'/%3E%3Crect fill='%23f47f8d' x='70' width='11' height='11'/%3E%3Crect fill='%23f6838b' x='60' y='10' width='11' height='11'/%3E%3Crect fill='%23f7868a' x='50' y='20' width='11' height='11'/%3E%3Crect fill='%23f88a88' x='40' y='30' width='11' height='11'/%3E%3Crect fill='%23f98d87' x='30' y='40' width='11' height='11'/%3E%3Crect fill='%23f99186' x='20' y='50' width='11' height='11'/%3E%3Crect fill='%23fa9486' x='80' width='11' height='11'/%3E%3Crect fill='%23fa9885' x='70' y='10' width='11' height='11'/%3E%3Crect fill='%23fa9c85' x='60' y='20' width='11' height='11'/%3E%3Crect fill='%23fa9f85' x='50' y='30' width='11' height='11'/%3E%3Crect fill='%23faa385' x='40' y='40' width='11' height='11'/%3E%3Crect fill='%23faa785' x='30' y='50' width='11' height='11'/%3E%3Crect fill='%23faab86' x='90' width='11' height='11'/%3E%3Crect fill='%23faae86' x='80' y='10' width='11' height='11'/%3E%3Crect fill='%23f9b287' x='70' y='20' width='11' height='11'/%3E%3Crect fill='%23f9b589' x='60' y='30' width='11' height='11'/%3E%3Crect fill='%23f8b98a' x='50' y='40' width='11' height='11'/%3E%3Crect fill='%23f8bd8c' x='40' y='50' width='11' height='11'/%3E%3Crect fill='%23f7c08e' x='90' y='10' width='11' height='11'/%3E%3Crect fill='%23f6c490' x='80' y='20' width='11' height='11'/%3E%3Crect fill='%23f6c792' x='70' y='30' width='11' height='11'/%3E%3Crect fill='%23f5cb94' x='60' y='40' width='11' height='11'/%3E%3Crect fill='%23f4ce97' x='50' y='50' width='11' height='11'/%3E%3Crect fill='%23f3d19a' x='90' y='20' width='11' height='11'/%3E%3Crect fill='%23f3d59d' x='80' y='30' width='11' height='11'/%3E%3Crect fill='%23f2d8a0' x='70' y='40' width='11' height='11'/%3E%3Crect fill='%23f1dba4' x='60' y='50' width='11' height='11'/%3E%3Crect fill='%23f1dfa7' x='90' y='30' width='11' height='11'/%3E%3Crect fill='%23f0e2ab' x='80' y='40' width='11' height='11'/%3E%3Crect fill='%23efe5af' x='70' y='50' width='11' height='11'/%3E%3Crect fill='%23efe8b3' x='90' y='40' width='11' height='11'/%3E%3Crect fill='%23eeebb7' x='80' y='50' width='11' height='11'/%3E%3Crect fill='%23EEB' x='90' y='50' width='11' height='11'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  flex: 1 1;
+  display: flex;
+  align-items: center;
+}
+
+.box .title {
+  font-family: "Covered By Your Grace", cursive;
+  font-size: 5rem;
+}
+
+.caption {
+  font-family: "Rancho", sans-serif;
+}
+
+.allie-emphasis {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.mini-gallery {
+  animation: mini-gallery-load 1200ms ease-out;
+}
+
+.mini-gallery-title {
+  font-size: 3rem;
+  font-family: "Covered By Your Grace", cursive;
+}
+
+.yarl__slide_image {
+  height: 100%;
+}
+
+
+
+.react-photo-album--row>img {
+  animation: portfolio-img-load 1300ms ease-out;
+}
+
+.textBlock {
+  display: inline-block;
+}
+
+.App>.section>.tile.is-ancestor {
+  padding: 10rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes hero-load {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+    scale: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes mini-gallery-load {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+    scale: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes portfolio-img-load {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+@media screen and (max-width: 860px) {
+  .animated {
+
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+  }
+
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    object-fit: cover;
+    padding-top: 2rem;
+    height: 10em;
+  }
+
+  .is-active a.navbar-item {
+    color: #000;
+  }
+
+  .box .title {
+    font-size: 1rem;
+  }
+
+  #portfolio-box {
+    min-height: 30rem;
+  }
+
+  #allieHero {
+    text-align: center;
+  }
+
+  #allieTitle {
+    font-family: "Covered By Your Grace", cursive;
+    font-size: 3rem;
+  }
+
+  #allieTitle>span {
+    display: block;
+    font-size: 4rem;
+  }
+} */
