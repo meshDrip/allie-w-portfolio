@@ -19,17 +19,17 @@ const Header = (props) => {
         <Link
           to="/"
           id="allie-logo"
-          className="flex justify-center"
+          className="relative flex justify-center"
           href="#"
           aria-label="logo"
         >
-          <svg className="h-auto w-14" viewBox="0 0 32 29.6">
-            <path
-              stroke="hsl(0%,0%,0%)"
-              fill="#5f5ccc"
-              d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
-	c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"
-            />
+          <div className="relative h-auto w-14"></div>
+          <svg className="absolute w-full h-full" viewBox="0 0 32 29.6">
+            <g
+              transform="translate(0.000000,134.000000) scale(0.100000,-0.100000)"
+              fill="#000000"
+              stroke="none"
+            ></g>
           </svg>
         </Link>
         <div
