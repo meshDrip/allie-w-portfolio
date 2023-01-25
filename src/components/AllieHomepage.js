@@ -4,9 +4,9 @@ import AllieMiniGallery from "./AllieMiniGallery";
 
 function AllieHomepage(props) {
   return (
-    <main className="flex flex-col justify-center flex-1 h-full mx-auto text-center content-section font-poppins">
+    <main className="flex flex-col justify-center flex-1 h-full mx-auto my-10 text-center content-section font-poppins">
       <Link to={"/about"}>
-        <div id="allieHero" className="my-10 mt-0">
+        <div id="allieHero" className="mb-10 ">
           <div className="flex flex-col justify-center w-auto p-1 mx-5 bg-white shadow-md md:mx-10 has-text-centered rounded-xl lg:flex-row">
             <div className="flex flex-row justify-center mx-auto md:w-2/5 basis-64 md:basis-auto">
               <img
