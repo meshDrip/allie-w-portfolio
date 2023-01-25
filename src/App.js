@@ -61,7 +61,7 @@ function App() {
   }, []);
 
   return (
-    <div className="container flex flex-col w-screen min-w-full min-h-screen bg-cover bg-mainBG">
+    <div className="container flex flex-col min-w-full min-h-screen bg-cover bg-mainBG">
       <Nav
         contactButtons={[
           {
