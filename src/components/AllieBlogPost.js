@@ -45,7 +45,7 @@ const AllieBlogPost = (props) => {
     );
 
   return (
-    <main className="p-12">
+    <main className="flex-1 p-12">
       <article className="container mx-auto bg-white rounded-lg shadow-lg drop-shadow">
         <header className="relative">
           <div className="absolute flex justify-center w-full h-full p-8 center">
