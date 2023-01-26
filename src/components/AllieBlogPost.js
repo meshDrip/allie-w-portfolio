@@ -53,7 +53,7 @@ const AllieBlogPost = (props) => {
               <h1 className="p-5 text-3xl md:p-10 lg:text-5xl font-handwritten">
                 {blogPost.title}
               </h1>
-              <h2>
+              <h4>
                 {" "}
                 {blogPost.publishedAt
                   ? `${new Date(
@@ -62,7 +62,7 @@ const AllieBlogPost = (props) => {
                       blogPost.publishedAt
                     ).toLocaleTimeString()}`
                   : ""}
-              </h2>
+              </h4>
             </div>
           </div>
           <img
