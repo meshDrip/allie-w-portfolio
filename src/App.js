@@ -14,6 +14,7 @@ import UnderConstruction from "./components/UnderConstruction";
 import AllieBlog from "./components/AllieBlog";
 import AllieBlogPost from "./components/AllieBlogPost";
 import AllieAbout from "./components/AllieAbout";
+import AnimatedRoutes from "./components/AnimatedRoutes";
 
 import firebase from "./.firebase/config.js";
 import { getStorage, ref, listAll, getDownloadURL } from "firebase/storage";
@@ -25,8 +26,8 @@ function App() {
   const [loaderIsVisible, setLoaderIsVisible] = useState(true);
   const storage = getStorage();
   const portfolioImgsRef = ref(storage, "portfolio-gallery");
-  const location = useLocation();
 
+  //Fetch firebase imgs
   useEffect(() => {
     const fetchImgs = async () => {
       try {
@@ -78,30 +79,10 @@ function App() {
           },
         ]}
       />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <AllieHomepage
-              allieGallery={galleryImages}
-              loaderIsVisible={loaderIsVisible}
-            />
-          }
-          exact
-        />
-        <Route
-          path="/portfolio"
-          element={
-            <AlliePortfolio
-              allieGallery={galleryImages}
-              loaderIsVisible={loaderIsVisible}
-            />
-          }
-        />
-        <Route path="/about" element={<AllieAbout />} />
-        <Route path="/post/:slug" element={<AllieBlogPost />} />
-        <Route path="/blog" element={<AllieBlog />} />
-      </Routes>
+      <AnimatedRoutes
+        galleryImages={galleryImages}
+        loaderIsVisible={loaderIsVisible}
+      />
       <AllieFooter />
     </div>
   );

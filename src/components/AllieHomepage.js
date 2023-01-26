@@ -2,9 +2,16 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import AllieMiniGallery from "./AllieMiniGallery";
 
+import { motion } from "framer-motion";
+
 function AllieHomepage(props) {
   return (
-    <main className="flex flex-col justify-center flex-1 h-full mx-auto my-10 text-center content-section font-poppins">
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.1 } }}
+      className="flex flex-col justify-center flex-1 h-full mx-auto my-10 text-center content-section font-poppins"
+    >
       <Link to={"/about"}>
         <div id="allieHero" className="mb-10 ">
           <div className="flex flex-col justify-center w-auto p-1 mx-5 bg-white shadow-md md:mx-10 has-text-centered rounded-xl lg:flex-row">
@@ -70,12 +77,12 @@ function AllieHomepage(props) {
             allieGallery={props.allieGallery}
             loaderIsVisible={props.loaderIsVisible}
           />
-          <button className="w-4/6 px-4 py-2 mx-auto mt-4 text-5xl text-center text-white md:text-3xl h-18 md:w-1/6 bg-canvasPink font-handwritten rounded-xl">
+          <button className="w-4/6 px-4 py-2 mx-auto mt-4 text-5xl text-center text-white md:text-3xl h-18 md:h-24 lg:w-3/12 bg-canvasPink font-handwritten rounded-xl">
             <span>Click me!</span>
           </button>
         </div>
       </Link>
-    </main>
+    </motion.main>
   );
 }
 

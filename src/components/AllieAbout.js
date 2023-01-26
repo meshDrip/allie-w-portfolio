@@ -3,6 +3,7 @@ import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import LoadingElement from "./LoadingElement.js";
+import { motion } from "framer-motion";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -33,7 +34,12 @@ function AllieAbout() {
     );
 
   return (
-    <main className="flex flex-col flex-1 w-5/6 max-w-5xl mx-auto my-5 text-white md:w-3/5 md:justify-center">
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.1 } }}
+      className="flex flex-col flex-1 w-5/6 max-w-5xl mx-auto my-5 text-white md:w-3/5 md:justify-center"
+    >
       <section className="flex flex-col justify-center min-h-full mx-auto my-auto text-center border-white bg-canvasPink rounded-3xl">
         <div className="mx-auto ">
           <img
@@ -58,7 +64,7 @@ function AllieAbout() {
           </div>
         </div>
       </section>
-    </main>
+    </motion.main>
   );
 }
 

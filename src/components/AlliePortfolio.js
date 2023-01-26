@@ -12,6 +12,8 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 import LoadingElement from "./LoadingElement.js";
 
+import { motion } from "framer-motion";
+
 const AlliePortfolio = (props) => {
   const breakpoints = [3840, 2400, 1080, 640, 384, 256, 128, 96, 64, 48];
   const [index, setIndex] = useState(-1);
@@ -49,7 +51,12 @@ const AlliePortfolio = (props) => {
   }));
 
   return (
-    <div className="container flex flex-col justify-center w-5/6 mx-auto my-auto md:w-2/5 max-h-1/2">
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.1 } }}
+      className="container flex flex-col justify-center w-5/6 mx-auto my-auto md:w-2/5 max-h-1/2"
+    >
       <div className="p-5 mx-auto my-10 bg-white shadow-2xl lg:p-10 rounded-3xl">
         <PhotoAlbum
           breakpoints={[300, 600, 1200]}
@@ -85,7 +92,7 @@ const AlliePortfolio = (props) => {
           vignette: true,
         }}
       />
-    </div>
+    </motion.main>
   );
 };
 

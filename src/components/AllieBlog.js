@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
-import "../index.css";
+import { motion } from "framer-motion";
 
 const AllieBlog = () => {
   const [postData, setPostData] = useState(null);
@@ -27,7 +27,12 @@ const AllieBlog = () => {
   }, []);
 
   return (
-    <main className="flex-1 overflow-hidden lg:mx-auto">
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.1 } }}
+      className="flex-1 overflow-hidden lg:mx-auto"
+    >
       <section className="flex flex-col lg:justify-center ">
         <div className="flex flex-col-reverse justify-center h-64 mx-5 my-auto mt-10 text-center rounded-md shadow-lg md:mx-auto bg-canvasPink min-w-64 md:w-3/5 min-h-32 lg:flex-row lg:rounded-xl lg:min-w-3/5">
           <div className="flex justify-center mt-auto overflow-hidden lg:w-1/2 lg:max-h-full lg:flex-shrink-0">
@@ -70,7 +75,7 @@ const AllieBlog = () => {
             ))}
         </div>
       </section>
-    </main>
+    </motion.main>
   );
 };
 
